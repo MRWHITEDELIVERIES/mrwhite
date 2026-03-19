@@ -1,0 +1,256 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+}
+.hero h2 {
+  margin-bottom: 10px;
+}
+.btn {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 12px 25px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+section {
+  padding: 40px 20px;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.service-item {
+  flex: 1 1 200px;
+  background: #e2e2e2;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.cta {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+.footer {
+  background-color: #ffffff;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center;
+}
+a.contact-link {
+  color: #fff;
+  text-decoration: underline;
+}
+/* Contact Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+input[type="text"],
+input[type="email"],
+textarea,
+select,
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+#priceDisplay {
+  font-weight: bold;
+  margin-top: 10px;
+}
+@media(max-width: 768px){
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+.footer {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+
+/* Add this to your stylesheet (styles.css) */
+
+.professional-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.professional-btn:hover {
+  background-color: #003d80;
+  transform: translateY(-5px); /* Moves the button upward */
+}
+
+
+
+  /* Style for the button */
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Bootstrap blue, you can change it */
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  /* Hover effect for the button */
+  .btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px);
+  }
+
+
+
+    .service-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .header-logo {
+  width: 60px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-small {
+  width: 50px; /* or any size you prefer */
+  height: auto;
+  float: left; /* or use flexbox in the header for better layout */
+}
+.logo-small:hover {
+  transform: scale(1.2) translateY(-5px); /* Enlarge and move up slightly */
+}
+
+
+
+/* Center the div */
+.re {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;    /* Vertical centering if needed */
+  height: 20vh;          /* Optional: full viewport height for vertical centering */
+}
+
+/* Add hover movement */
+.re img {
+  transition: transform 0.3s ease;
+}
+
+.re:hover img {
+  transform: translateY(-10px); /* Moves the image up when hovered */
+}
+
+
+
+.re p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+  /* Define bounce animation */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    20% { transform: translateY(-10px); }
+    40% { transform: translateY(0); }
+    60% { transform: translateY(-5px); }
+    80% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+  }
+
+  /* Apply bounce on hover */
+  .re:hover {
+    animation: bounce 0.5s;
+    /* Optional: add cursor pointer to indicate interactivity */
+    cursor: pointer;
+  }
