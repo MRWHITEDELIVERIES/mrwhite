@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Place an Order / Inquiry - MR WHITE</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+<h1>MR WHITE DELIVERIES AND PROJECTS</h1>
+
+<nav>
+ <a href="index.html" style="
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;"
+  onmouseover="this.style.backgroundColor='#003d80'; this.style.transform='translateY(-3px)';"
+  onmouseout="this.style.backgroundColor='#0056b3'; this.style.transform='translateY(0)';">
+  Back to Home Page
+</a>
+ 
+</nav>
+</header>
+
+<!-- Place your form here -->
+<section id="order" style="padding:40px 20px; background:#f4f4f4;">
+<h2 style="text-align:center;">Place an Order</h2>
+<div class="contact-form">
+<form action="https://formsubmit.co/siyandahlophe860@gmail.com" method="POST" id="orderForm">
+  <div class="form-group">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone / WhatsApp:</label>
+    <input type="text" id="phone" name="phone" required>
+  </div>
+  <!-- Service selection -->
+  <div class="form-group">
+    <label for="service">Select Service:</label>
+    <select id="service" name="service" required>
+      <option value="">--Please choose an option--</option>
+      <option value="Food & Takeaways">Food & Takeaways</option>
+      <option value="Groceries & Beverages">Groceries & Beverages</option>
+      <option value="Medication & Pharmacy Orders">Medication & Pharmacy Orders</option>
+      <option value="Parcels & Documents">Parcels & Documents</option>
+      <option value="Small Packages">Small Packages</option>
+    </select>
+  </div>
+  <!-- Distance -->
+  <div class="form-group">
+    <label for="distance">Select Distance (from the pickup to the dropoff):</label>
+    <select id="distance" name="distance" onchange="updatePrice()" required>
+      <option value="">--Choose Distance--</option>
+      <option value="5">km</option>
+      <option value="10">km</option>
+      <option value="20">km</option>
+      <option value="30">km</option>
+      <option value="40">km</option>
+      <option value="50">km</option>
+      <option value="60">km</option>
+    </select>
+  </div>
+  <!-- Price display -->
+  <div id="priceDisplay"></div>
+  <!-- Pickup address -->
+  <div class="form-group">
+    <label for="pickupAddress">Pickup Address Location:</label>
+    <input type="text" id="pickupAddress" name="pickupAddress" placeholder="Enter pickup location" required>
+  </div>
+  <!-- Dropoff address -->
+  <div class="form-group">
+    <label for="dropoffAddress">Dropoff Address Location:</label>
+    <input type="text" id="dropoffAddress" name="dropoffAddress" placeholder="Enter delivery location" required>
+  </div>
+  <!-- Schedule Delivery: Date & Time -->
+  <div class="form-group">
+    <label for="deliveryDate">Select Delivery Date:</label>
+    <input type="date" id="deliveryDate" name="deliveryDate" required>
+  </div>
+  <div class="form-group">
+    <label for="deliveryTime">Select Delivery Time:</label>
+    <input type="time" id="deliveryTime" name="deliveryTime" required>
+  </div>
+  <!-- Additional message -->
+  <div class="form-group">
+    <label for="message">Additional Details / Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Provide any additional info or instructions..."></textarea>
+  </div>
+
+
+  <label for="response">When will you want to receive your delivery</label>
+        <select id="Deliver" name="Deliver">
+           <option value="immediately">Choose</option>
+          <option value="immediately">Immediately</option>
+          <option value="within7days">Within 7 days</option>
+          <option value="anytime">Anytime</option>
+
+  <!-- Hidden Subject -->
+  <input type="hidden" name="_subject" value="New Delivery Inquiry/Order" />
+  <!-- Submit button -->
+  <button type="submit">Send</button>
+</form>
+
+
+
+</div>
+
+<div class="footer">
+  <!-- Footer -->
+  <footer>
+    <!-- Social Media Section -->
+    <div id="social-media" style="margin-top: 30px; text-align: center;">
+      <h3 style="color:#ffffff; margin-bottom: 15px;">Follow Us</h3>
+      <a href="https://web.facebook.com/sk.hlophe.5" target="_blank" aria-label="Facebook" style="margin: 0 10px; display: inline-block;">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" style="width:24px; height:24px; vertical-align: middle;">
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter" style="margin: 0 10px; display: inline-block;">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" style="width:24px; height:24px; vertical-align: middle;">
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram" style="margin: 0 10px; display: inline-block;">
+        <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" style="width:24px; height:24px; vertical-align: middle;">
+      </a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" style="margin: 0 10px; display: inline-block;">
+        <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" style="width:24px; height:24px; vertical-align: middle;">
+      </a>
+    </div>
+    <!-- Your message -->
+    <p style="text-align:center; color:#fff; margin-top:10px;">Thank you for choosing MR WHITE!</p>
+  </footer>
+  <p>&copy; 2026 MR WHITE DELIVERIES AND PROJECTS. All rights reserved.</p>
+</div>
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>
